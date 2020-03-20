@@ -18,14 +18,17 @@
             Ulemper: Svært at bruge normalt, side-specifikt JavaScript.
 
 
-1. En kort beskrivelse af det produkt du vil udvikle 
-En mobil (Android) app, med to sider. En af siderne skal have en liste af små spil. Dog kun ét spil forventes at færdigøres før presentationen, er der designet to spil.
+1. En kort beskrivelse af det produkt du vil udvikle<br>
 
-2. En beskrivelse af den teknologi du vil anvende i udviklingen
-Ionic Framework (Angular, Cordova, Capacitor, TypeScript, Sass, Node.JS, Android Studio)
+        En mobil (Android) app, med to sider. En af siderne skal have en liste af små spil. Dog kun ét spil forventes at færdigøres før presentationen, er der designet to spil.
 
-3. En liste over de ressourcer som har hjulpet dig i processen
-https://ionicframework.com/docs
-https://developer.android.com/
-https://capacitor.ionicframework.com/docs/
-https://www.google.com/
+2. En beskrivelse af den teknologi du vil anvende i udviklingen<br>
+
+        Ionic Framework (Angular, Cordova, Capacitor, TypeScript, Sass, Node.JS, Android Studio)
+
+3. En liste over de ressourcer som har hjulpet dig i processen<br>
+
+        https://ionicframework.com/docs
+        https://developer.android.com/
+        https://capacitor.ionicframework.com/docs/
+        https://www.google.com/
