@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="initial-cover">
+        <p class="initial-cover_title">ANGLE SHOOTER</p>
+        <ion-button class="start-button" color="primary" size="large">Start</ion-button>
+        <ion-button (click)="dismissModal()" class="exit-button" color="danger" size="large">Exit</ion-button>
+    </div>
+
+    <div class="dead-popup">
+        <p class="dead-popup_score-text">YOUR SCORE WAS</p>
+        <p class="dead-popup_score">0</p>
+        <ion-button class="start-button" color="success" size="large">Restart</ion-button>
+        <ion-button (click)="dismissModal()" class="exit-button" color="danger" size="large">Exit</ion-button>
+    </div>
+
+    <div class="controls"></div>
+
+
+    <div class="game-canvas">
+        <div class="game_score">0</div>
+        <div class="game_player side-0"><ion-icon name="triangle"></ion-icon></div>
+        <div class="game_bg">
+            <div class="line-vertical"></div>
+            <div class="line-horizontal"></div>
+            <div class="line-circle"></div>
+        </div>
+        <div class="game_enemies">
+            <!-- Enemies here -->
+        </div>
+        <div class="game_bullets">
+            <!-- Bullets here -->
+        </div>
+    </div>
+</ion-content>

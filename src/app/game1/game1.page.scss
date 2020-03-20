@@ -1,0 +1,251 @@
+.dead-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        animation: show-dead-popup 0.4s ease-in-out;
+    }
+
+    .dead-popup_score {
+        font-size: 3.5rem;
+        font-family: monospace;
+        line-height: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .dead-popup_score-text {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+
+.initial-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        animation: hide-initial-cover 0.4s ease-in-out;
+    }
+
+    .initial-cover_title {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0 0 2rem 0;
+        font-family: monospace;
+    }
+}
+
+.start-button {
+    transition: transform 0.2s ease;
+
+    &:active {
+        transform: scale(1.1);
+    }
+}
+
+.controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 95;
+}
+
+.game-canvas {
+    height: 100%;
+    position: relative;
+    background-color: #333;
+    color: #F0F0F0;
+    overflow: hidden;
+    
+    .game_player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: var(--ion-color-primary, #3880ff);
+        font-size: 4rem;
+        transition: transform 0.075s ease;
+        z-index: 15;
+        height: 1em;
+
+        &.die {
+            font-size: 4rem;
+            animation: player-die 0.75s ease forwards;
+        }
+
+        &.side-0 {
+            transform: translateX(-50%) translateY(-50%) rotate(0deg);
+        }
+
+        &.side-1 {
+            transform: translateX(-50%) translateY(-50%) rotate(270deg);
+        }
+        
+        &.side-2 {
+            transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        }
+        
+        &.side-3 {
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+        }
+    }
+
+    .game_score {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: white;
+        font-size: 3rem;
+        font-family: monospace;
+        line-height: 100%;
+    }
+
+    .game_enemies {
+        font-size: 4rem;
+        color: var(--ion-color-danger);
+        
+        .enemy {
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            height: 1em;
+
+            &.die {
+                transform: scale(0);
+                animation: enemy-die 0.5s ease;
+            }
+        }
+    }
+
+    .game_bullets {
+        font-size: 1rem;
+        color: var(--ion-color-secondary);
+
+        .bullet {
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            height: 1em;
+        }
+    }
+
+    .game_bg {
+        .line-vertical {
+            height: 100%;
+            background-color: #333;
+            border-right: 1px dashed white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+
+        .line-horizontal {
+            width: 100%;
+            background-color: #333;
+            border-bottom: 1px dashed white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+        }
+
+        .line-circle {
+            width: 4.2em;
+            height: 4.2rem;
+            border-radius: 100px;
+            border: 1px dashed white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+}
+
+/* Animations */
+@keyframes hide-initial-cover {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes show-dead-popup {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes enemy-die {
+    0% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+    20% {
+        transform: translateX(-50%) translateY(-50%) scale(1.1) rotate(-360deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) scale(0) rotate(360deg);
+    }
+}
+
+@keyframes player-die {
+    0% {
+        font-size: 4rem;
+    }
+    20% {
+        font-size: 4.25rem;
+    }
+    100% {
+        font-size: 0px;
+    }
+}

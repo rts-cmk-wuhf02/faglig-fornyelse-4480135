@@ -1,0 +1,8 @@
+{
+  "appId": "rupitian.madcreativity.app",
+  "appName": "Rupitian App",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
