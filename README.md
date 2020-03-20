@@ -1,21 +1,20 @@
-0. En kort video* præsentation af det færdige produkt. I videoen* skal du forklare:
-  a. Hvad du har udviklet.
+0. En kort video* præsentation af det færdige produkt. I videoen* skal du forklare:<br>
+  a. Hvad du har udviklet.<br>
         En mobil (Android) app, med to sider og et småt spil
 
-  b. Hvilken teknologi du har anvendt.
+  b. Hvilken teknologi du har anvendt.<br>
         Ionic Framework (Angular, Cordova, Capacitor, TypeScript, Sass, Node.JS, Android Studio)
 
-  c. Hvorfor du har anvendt den aktuelle teknologi.
+  c. Hvorfor du har anvendt den aktuelle teknologi.<br>
         En af de mest populære. Indbygget Sass. Let forståelig dokumentation omkring kompilering og device testing.
 
-  d. Hvilke alternative teknologier du kunne have brugt.
+  d. Hvilke alternative teknologier du kunne have brugt.<br>
         Andre frameworks: Flutter (Udviklet af Google - bruger Dart), Onsen
         Inden for Ionic: React
 
-  e. Lidt om de fordele eller ulemper som du har erfaret omkring den aktuelle teknologi.
+  e. Lidt om de fordele eller ulemper som du har erfaret omkring den aktuelle teknologi.<br>
         Fordele: Let at lave nye sider. Lette moduler/components. God dokumentation for næsten alle trin af udvikling. Indbygget TypeScript og Sass.
         Ulemper: Svært at bruge normalt, side-specifikt JavaScript.
-
 
 
 1. En kort beskrivelse af det produkt du vil udvikle 
