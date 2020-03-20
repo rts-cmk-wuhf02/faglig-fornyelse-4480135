@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-item>
+            <ion-label class="ion-text-wrap">
+              <ion-text color="primary">
+                <h1>Applications</h1>
+              </ion-text>
+            </ion-label>
+        </ion-item>
+        <ion-item (click)="presentModal('game1')">
+            <p>Angle Shooter</p>
+        </ion-item>
+        <ion-item (click)="presentModal('game2')" [disabled]="true">
+            <p>Straight Shooter</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
